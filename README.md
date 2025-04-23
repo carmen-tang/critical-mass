@@ -1,4 +1,4 @@
-# Critical Mass Take Home
+# Critical Mass
 
 A lightweight vanilla JS project that:
 - Fetches cities from `navigation.json` and renders navigation tabs
