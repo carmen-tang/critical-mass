@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "San Francisco";
+  font-weight: 400;
+  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+html, body {
+  font-size: 16px;
+  /* font-family: "Nunito", sans-serif; */
+  /* font-family: "San Francisco"; */
+  /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: 'Manjari', sans-serif;
+}
+
+#nav-container {
+  margin-top: 1em;
+}
+
+.nav-titles {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 1em;
+}
+
+.nav-title {
+  border: transparent;
+  background: transparent;
+  cursor: pointer;
+  height: 2rem;
+  font-size: 18px;
+  color: #c0c0c0;
+  margin-right: 2em;
+  /* font-family: "Nunito", sans-serif;
+  font-family: "San Francisco";
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
+  font-family: 'Manjari', sans-serif;
+}
+
+.nav-title:hover {
+  color: rgb(0, 153, 255);
+}
+
+.nav-title:focus,
+.nav-title:active {
+  color: #000000;
+}
+
+.nav-line {
+  background: #d1d5db;
+  height: 2px;
+  width: 100%;
+  position: relative;
+  margin-top: 0.5em;
+}
+
+.nav-indicator {
+  background: #000000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transition-duration: 200ms;
+  transition-property: transform, width;
+}
