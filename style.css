@@ -5,7 +5,7 @@
 }
 
 html, body {
-  font-size: 16px;
+  font-size: 18px;
   font-family: "Nunito", sans-serif;
   /* font-family: "San Francisco"; */
   /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
@@ -70,4 +70,23 @@ html, body {
   color: #000000 !important;
   /* I prefer not to use !important, but on Safari specifically,
   it was causing the hover class to override the active class. I use these sparingly.*/
+}
+
+.time-display {
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.date-display {
+  font-size: 1em;
+  font-weight: 500;
+  text-align: center;
+}
+
+.clock {
+  margin-top: 2em;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
