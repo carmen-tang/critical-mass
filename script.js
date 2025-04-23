@@ -1,15 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const titlesEl  = document.querySelector('.nav-titles');
   const indicator = document.getElementById('selectedIndicator');
-  let activeBtn;  // keep track of which tab is active
+  let activeBtn;
 
-  // 1) helper to move & size the indicator under a given button
   function moveIndicator(btn) {
     const btnRect    = btn.getBoundingClientRect();
     const parentRect = titlesEl.getBoundingClientRect();
     const offset     = btnRect.left - parentRect.left;
     indicator.style.width     = `${btnRect.width}px`;
     indicator.style.transform = `translateX(${offset}px)`;
+  }
+
+  function activateButton(btn) {
+    titlesEl
+      .querySelectorAll('.nav-title.active')
+      .forEach(el => el.classList.remove('active'));
+    btn.classList.add('active');
   }
 
   fetch('navigation.json')
@@ -24,7 +30,14 @@ document.addEventListener('DOMContentLoaded', () => {
         btn.textContent = city.label;
         titlesEl.appendChild(btn);
 
+        // make the very first button active immediately
+        if (i === 0) {
+          activeBtn = btn;
+          btn.classList.add('active');
+        }
+
         btn.addEventListener('click', () => {
+          activateButton(btn);
           activeBtn = btn;
           moveIndicator(btn);
         });
@@ -47,8 +60,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-
-
-
-
-console.log('here');

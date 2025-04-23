@@ -6,7 +6,7 @@
 
 html, body {
   font-size: 16px;
-  /* font-family: "Nunito", sans-serif; */
+  font-family: "Nunito", sans-serif;
   /* font-family: "San Francisco"; */
   /* font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
   font-family: 'Manjari', sans-serif;
@@ -32,10 +32,12 @@ html, body {
   font-size: 18px;
   color: #c0c0c0;
   margin-right: 2em;
-  /* font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
+  /*
   font-family: "San Francisco";
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif; */
-  font-family: 'Manjari', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  */
+  /* font-family: 'Manjari', sans-serif; */
 }
 
 .nav-title:hover {
@@ -62,4 +64,10 @@ html, body {
   bottom: 0;
   transition-duration: 200ms;
   transition-property: transform, width;
+}
+
+.active {
+  color: #000000 !important;
+  /* I prefer not to use !important, but on Safari specifically,
+  it was causing the hover class to override the active class. I use these sparingly.*/
 }
